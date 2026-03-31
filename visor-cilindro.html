@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Visor Cilíndrico</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; background-color: #000; }
+        #container { width: 100vw; height: 100vh; }
+        #ui-container { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 15px; z-index: 10; align-items: center; }
+        button, .btn-home { padding: 10px 24px; font-size: 16px; cursor: pointer; background-color: rgba(0, 0, 0, 0.6); color: white; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 8px; transition: all 0.3s; backdrop-filter: blur(4px); text-decoration: none; }
+        button:hover, .btn-home:hover { background-color: rgba(0, 0, 0, 0.9); border-color: white; }
+        .btn-home { background-color: rgba(37, 99, 235, 0.6); }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="ui-container">
+        <a href="index.html" class="btn-home">Menú</a>
+        <button id="btn-prev">Anterior</button>
+        <button id="btn-tour" style="background-color: #f59e0b; border-color: #f59e0b;">▶ Recorrido Automático</button>
+        <button id="btn-next">Siguiente</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/app-cilindro.js"></script>
+</body>
+</html>
